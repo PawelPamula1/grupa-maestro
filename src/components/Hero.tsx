@@ -33,9 +33,9 @@ export default function Hero() {
 
           {/* Main Headline */}
           <h1 className="display-font text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-6 leading-none">
-            LOGISTYKA
+            GRUPA
             <br />
-            <span className="text-orange">BEZ GRANIC</span>
+            <span className="text-orange">MAESTRO</span>
           </h1>
 
           {/* Subheadline */}
