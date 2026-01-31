@@ -1,18 +1,20 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Contact() {
-  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [formStatus, setFormStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormStatus('sending');
+    setFormStatus("sending");
 
     // Tutaj będzie integracja z backend/email service
     setTimeout(() => {
-      setFormStatus('success');
-      setTimeout(() => setFormStatus('idle'), 3000);
+      setFormStatus("success");
+      setTimeout(() => setFormStatus("idle"), 3000);
     }, 1500);
   };
 
@@ -34,8 +36,8 @@ export default function Contact() {
             <span className="text-orange">Z NAMI</span>
           </h2>
           <p className="text-concrete-light text-lg max-w-2xl mx-auto">
-            Odpowiemy na wszystkie pytania i pomożemy dobrać optymalne rozwiązanie dla Twojego
-            biznesu.
+            Odpowiemy na wszystkie pytania i pomożemy dobrać optymalne
+            rozwiązanie dla Twojego biznesu.
           </p>
         </div>
 
@@ -158,7 +160,9 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-bold text-navy text-xl mb-2">Godziny otwarcia</h3>
+                  <h3 className="font-bold text-navy text-xl mb-2">
+                    Godziny otwarcia
+                  </h3>
                   <p className="text-concrete-light leading-relaxed">
                     <strong className="text-navy">Pon–Pt:</strong> 8:00–17:00
                     <br />
@@ -179,7 +183,10 @@ export default function Contact() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-navy font-bold mb-2 text-sm uppercase">
+                <label
+                  htmlFor="name"
+                  className="block text-navy font-bold mb-2 text-sm uppercase"
+                >
                   Imię i nazwisko *
                 </label>
                 <input
@@ -193,7 +200,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-navy font-bold mb-2 text-sm uppercase">
+                <label
+                  htmlFor="email"
+                  className="block text-navy font-bold mb-2 text-sm uppercase"
+                >
                   Email *
                 </label>
                 <input
@@ -207,7 +217,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-navy font-bold mb-2 text-sm uppercase">
+                <label
+                  htmlFor="phone"
+                  className="block text-navy font-bold mb-2 text-sm uppercase"
+                >
                   Telefon
                 </label>
                 <input
@@ -238,17 +251,18 @@ export default function Contact() {
 
               <button
                 type="submit"
-                disabled={formStatus === 'sending'}
+                disabled={formStatus === "sending"}
                 className="w-full bg-orange hover:bg-orange-dark text-white px-8 py-4 font-bold uppercase text-sm tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                {formStatus === 'sending' && 'Wysyłanie...'}
-                {formStatus === 'success' && '✓ Wysłano!'}
-                {formStatus === 'idle' && 'Wyślij wiadomość'}
-                {formStatus === 'error' && 'Błąd - spróbuj ponownie'}
+                {formStatus === "sending" && "Wysyłanie..."}
+                {formStatus === "success" && "✓ Wysłano!"}
+                {formStatus === "idle" && "Wyślij wiadomość"}
+                {formStatus === "error" && "Błąd - spróbuj ponownie"}
               </button>
 
               <p className="text-concrete text-sm">
-                * Pola wymagane. Twoje dane są bezpieczne i nie będą udostępniane osobom trzecim.
+                * Pola wymagane. Twoje dane są bezpieczne i nie będą
+                udostępniane osobom trzecim.
               </p>
             </form>
           </div>
@@ -258,7 +272,7 @@ export default function Contact() {
         <div className="mt-16">
           <div className="bg-white p-4">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.123456789!2d23.4167!3d50.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDI3JzAwLjAiTiAyM8KwMjUnMDAuMCJF!5e0!3m2!1spl!2spl!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.3126781683633!2d23.42146021638806!3d50.436430597565305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4724afc7d2b5ffa9%3A0x80f76b7ca600895e!2sMagazyn%20Czasowego%20Sk%C5%82adowania%20Grupa%20Maestro%20Damian%20Harbuz!5e0!3m2!1sen!2spl!4v1769891766854!5m2!1sen!2spl"
               width="100%"
               height="450"
               style={{ border: 0 }}
