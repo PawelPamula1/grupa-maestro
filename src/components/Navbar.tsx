@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 lg:w-14 lg:h-14 bg-orange flex items-center justify-center">
               <span className="display-font text-white text-2xl lg:text-3xl">
                 GM
